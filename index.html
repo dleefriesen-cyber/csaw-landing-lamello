@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lamello USA</title>
+<meta name="description" content="See Lamello joinery in action. Buy online or find an authorized Lamello dealer near you.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+
+<script>
+/* =====================================================================
+   PAGE SETTINGS — edit this block for each landing page / affiliate.
+   ===================================================================== */
+window.LP = {
+  // VSL video. Use ONE of these:
+  youtubeId: "",            // e.g. "dQw4w9WgXcQ"
+  vimeoId:   "",            // e.g. "123456789"
+  mp4Url:    "",            // e.g. "https://.../lamello-vsl.mp4"
+  posterUrl: "https://www.csaw.com/wp-content/uploads/2023/09/Lamello-USA-FullBG-darken-more.jpg",
+
+  // Default "Buy Now" shopping-cart link (used when no affiliate code matches).
+  cartUrl:   "https://www.csaw.com/lamello/all-products/",
+
+  // Per-creator cart links. Ad URL ...?a=<code> picks the matching link.
+  // One page can serve every affiliate, or copy this file per affiliate
+  // and just change cartUrl above.
+  affiliates: {
+    // "creatorname": "https://shop.example.com/cart?ref=creatorname",
+  },
+
+  dealerUrl: "https://www.csaw.com/lamello/#dealer",
+
+  // Meta Pixel ID (leave blank to disable).
+  metaPixelId: ""
+};
+</script>
+
+<style>
+:root {
+  --red: #a9273d;
+  --red-dark: #8c1f32;
+  --charcoal: #444444;
+  --charcoal-dark: #333333;
+  --text: #666666;
+  --heading: #333333;
+  --light: #f6f6f6;
+  --white: #ffffff;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body {
+  font-family: Montserrat, Arial, sans-serif;
+  color: var(--text);
+  background: var(--white);
+  font-size: 18px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+img { max-width: 100%; display: block; }
+a { color: inherit; }
+
+/* Header — matches the csaw.com Lamello bar */
+.topbar {
+  background: var(--charcoal-dark);
+  display: flex; justify-content: center;
+}
+.topbar span {
+  background: var(--red); color: #fff;
+  font-size: 13px; font-weight: 600; letter-spacing: .08em;
+  padding: 8px 40px;
+}
+header.brand {
+  background: var(--charcoal);
+  display: flex; justify-content: center; align-items: center;
+  padding: 12px 16px;
+}
+header.brand img { height: 44px; width: auto; }
+
+/* Hero / VSL */
+.hero {
+  position: relative;
+  background: #222 url("https://www.csaw.com/wp-content/uploads/2023/09/Lamello-USA-FullBG-darken-more.jpg") center/cover no-repeat;
+  color: #fff;
+  text-align: center;
+  padding: 40px 16px 56px;
+}
+.hero::before { content: ""; position: absolute; inset: 0; background: rgba(0,0,0,.55); }
+.hero > * { position: relative; }
+.eyebrow {
+  font-size: 14px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase;
+  margin: 0 0 18px; color: #f1d5da;
+}
+.vsl {
+  max-width: 880px; margin: 0 auto;
+  aspect-ratio: 16 / 9;
+  background: #000;
+  box-shadow: 0 20px 50px rgba(0,0,0,.5);
+  border: 3px solid #fff;
+  position: relative; overflow: hidden;
+}
+.vsl iframe, .vsl video { width: 100%; height: 100%; border: 0; display: block; }
+.vsl .placeholder {
+  position: absolute; inset: 0;
+  background-size: cover; background-position: center;
+  display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 14px;
+  font-weight: 600; font-size: 15px; letter-spacing: .05em;
+}
+.play {
+  width: 84px; height: 84px; border-radius: 50%;
+  background: var(--red); display: grid; place-items: center;
+  box-shadow: 0 6px 20px rgba(0,0,0,.4);
+}
+.play::after {
+  content: ""; border-left: 26px solid #fff; border-top: 16px solid transparent; border-bottom: 16px solid transparent;
+  margin-left: 7px;
+}
+
+/* Headline + CTAs */
+.offer { text-align: center; padding: 56px 16px 64px; max-width: 960px; margin: 0 auto; }
+.offer h1 {
+  color: var(--heading); font-weight: 900; font-size: clamp(28px, 5vw, 44px);
+  line-height: 1.15; margin: 0 0 16px;
+}
+.offer h1 em { font-style: normal; color: var(--red); }
+.offer p.sub { margin: 0 auto 36px; max-width: 680px; }
+.ctas {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 20px;
+  max-width: 760px; margin: 0 auto;
+}
+.cta {
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px;
+  text-decoration: none; border-radius: 50px;
+  padding: 20px 24px; font-weight: 700; font-size: 20px;
+  transition: transform .15s ease, background-color .15s ease;
+}
+.cta small { font-weight: 400; font-size: 13px; opacity: .9; }
+.cta:hover { transform: translateY(-2px); }
+.cta.buy { background: var(--red); color: #fff; }
+.cta.buy:hover { background: var(--red-dark); }
+.cta.dealer { background: #777; color: #fff; }
+.cta.dealer:hover { background: #555; }
+
+/* Red trust band — same red block as csaw.com/lamello */
+.band { background: var(--red); color: #fff; padding: 48px 16px; }
+.band .inner {
+  max-width: 1100px; margin: 0 auto;
+  display: grid; grid-template-columns: 260px 1fr; gap: 40px; align-items: center;
+}
+.band h2 { font-size: 22px; font-weight: 700; margin: 0 0 10px; line-height: 1.3; }
+.band p { margin: 0; font-size: 17px; }
+
+.points { background: var(--light); padding: 48px 16px; }
+.points ul {
+  list-style: none; padding: 0; margin: 0 auto; max-width: 1100px;
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
+}
+.points li { background: #fff; padding: 24px; text-align: center; }
+.points li strong { display: block; color: var(--red); font-size: 18px; margin-bottom: 6px; }
+.points li span { font-size: 15px; }
+
+footer {
+  background: var(--charcoal-dark); color: #bbb; text-align: center;
+  font-size: 13px; padding: 24px 16px;
+}
+footer a { color: #fff; }
+
+@media (max-width: 720px) {
+  .ctas { grid-template-columns: 1fr; }
+  .band .inner { grid-template-columns: 1fr; text-align: center; }
+  .band img { max-width: 200px; margin: 0 auto; }
+  .points ul { grid-template-columns: 1fr; }
+  .topbar span { padding: 6px 24px; }
+  .offer { padding: 40px 16px 48px; }
+}
+</style>
+</head>
+<body>
+
+<div class="topbar"><span>LAMELLO USA</span></div>
+<header class="brand">
+  <img src="https://www.csaw.com/wp-content/uploads/2023/10/Lamello-Colonial-Saw-Home-of-Lamello-USA-logo-sm.webp"
+       alt="Lamello | Colonial Saw | Home of Lamello USA">
+</header>
+
+<section class="hero">
+  <p class="eyebrow">Innovation. Reliability. Quality. Precision.</p>
+  <div class="vsl" id="vsl"></div>
+</section>
+
+<section class="offer">
+  <h1>Faster, Stronger Joints. <em>Every Single Time.</em></h1>
+  <p class="sub">See why cabinet shops, millworkers, and woodworkers trust Lamello joinery. Order yours today or get hands-on with an authorized dealer near you.</p>
+  <div class="ctas">
+    <a class="cta buy" id="buyBtn" href="#">Buy Now<small>Shop Lamello online</small></a>
+    <a class="cta dealer" id="dealerBtn" href="#">Find a Dealer<small>See it in person near you</small></a>
+  </div>
+</section>
+
+<section class="band">
+  <div class="inner">
+    <img src="https://www.csaw.com/wp-content/uploads/2024/02/Lamello-Colonial-Saw-50-2x.webp" alt="Lamello and Colonial Saw, 50 years of partnership">
+    <div>
+      <h2>Exclusive U.S. Importer &amp; Distributor of Lamello Since 1974</h2>
+      <p>Colonial Saw is the official home of Lamello USA, backed by more than 50 years of sales, service, and technical support for Lamello joinery systems.</p>
+    </div>
+  </div>
+</section>
+
+<section class="points">
+  <ul>
+    <li><strong>Swiss Precision</strong><span>Lamello has built world-class joinery tools since 1944.</span></li>
+    <li><strong>U.S. Support</strong><span>Parts, service, and training from Colonial Saw.</span></li>
+    <li><strong>Built for Pros</strong><span>From biscuit joiners to the P-System and Cabineo.</span></li>
+  </ul>
+</section>
+
+<footer>
+  &copy; <span id="yr"></span> Colonial Saw &middot; Home of Lamello USA &middot;
+  <a href="https://www.csaw.com/lamello/" target="_blank" rel="noopener">csaw.com/lamello</a>
+</footer>
+
+<script>
+(function () {
+  var cfg = window.LP;
+  document.getElementById("yr").textContent = new Date().getFullYear();
+
+  // Affiliate code: ?a=<code> on first visit, remembered so it survives reloads.
+  var code = null;
+  try {
+    code = new URLSearchParams(location.search).get("a");
+    if (code) localStorage.setItem("lp_aff", code); else code = localStorage.getItem("lp_aff");
+  } catch (e) {}
+  var cartUrl = (code && cfg.affiliates[code.toLowerCase()]) || cfg.cartUrl;
+
+  var buy = document.getElementById("buyBtn");
+  var dealer = document.getElementById("dealerBtn");
+  buy.href = cartUrl;
+  dealer.href = cfg.dealerUrl;
+
+  // VSL
+  var box = document.getElementById("vsl");
+  if (cfg.youtubeId) {
+    box.innerHTML = '<iframe src="https://www.youtube-nocookie.com/embed/' + encodeURIComponent(cfg.youtubeId) +
+      '?rel=0&modestbranding=1&playsinline=1" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen title="Lamello video"></iframe>';
+  } else if (cfg.vimeoId) {
+    box.innerHTML = '<iframe src="https://player.vimeo.com/video/' + encodeURIComponent(cfg.vimeoId) +
+      '?title=0&byline=0&portrait=0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Lamello video"></iframe>';
+  } else if (cfg.mp4Url) {
+    var v = document.createElement("video");
+    v.src = cfg.mp4Url; v.controls = true; v.playsInline = true; v.poster = cfg.posterUrl;
+    box.appendChild(v);
+  } else {
+    box.innerHTML = '<div class="placeholder" style="background-image:url(' + cfg.posterUrl + ')"><div class="play"></div>Video coming soon</div>';
+  }
+
+  // Meta Pixel
+  if (cfg.metaPixelId) {
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+    document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', cfg.metaPixelId);
+    fbq('track', 'PageView');
+  }
+  function track(evt, label) {
+    if (window.fbq) fbq('track', evt, { content_name: label, affiliate: code || "none" });
+  }
+  buy.addEventListener("click", function () { track("InitiateCheckout", "Buy Now"); });
+  dealer.addEventListener("click", function () { track("FindLocation", "Find a Dealer"); });
+})();
+</script>
+</body>
+</html>
